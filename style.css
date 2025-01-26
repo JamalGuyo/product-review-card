@@ -1,5 +1,22 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*VARIABLES*/
-:root {}
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+
+  --fs: 0.9rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --ff-montserrat: "Montserrat", serif;
+  --ff-fraunces: "Fraunces", serif;
+}
 
 /*RESET*/
 *,
