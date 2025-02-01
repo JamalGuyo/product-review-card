@@ -16,6 +16,8 @@
 
   --ff-montserrat: "Montserrat", serif;
   --ff-fraunces: "Fraunces", serif;
+
+  --flow-space: 1rem;
 }
 
 /*RESET*/
@@ -30,6 +32,11 @@ h1,
 h2,
 p {
   margin: 0;
+}
+
+/*UTILITY*/
+.flow>*+* {
+  margin-top: var(--flow-space, 1rem);
 }
 
 /*GENERAL*/
