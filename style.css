@@ -3,28 +3,18 @@
 
 /*VARIABLES*/
 :root {
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-black: #000;
-  --clr-cream: hsl(30, 38%, 92%);
-  --clr-dark-cyan: hsl(158, 36%, 37%);
-  --very-dark-blue: hsl(212, 21%, 14%);
-  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
 
-  --fs-300: 0.9rem;
-  --fs-400: 1rem;
-  --fs-500: 1.25rem;
-  --fs-600: 1.5rem;
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-900: hsl(212, 21%, 14%);
 
   --fw-500: 500;
   --fw-700: 700;
 
-  --ff-montserrat: "Montserrat", serif;
-  --ff-fraunces: "Fraunces", serif;
-
-  --flow-space: 1rem;
-  --flow-space-md: 0.75rem;
-  --flow-space-sm: 0.5rem;
-  --radius: 1rem;
+  --ff-base: "Montserrat", serif;
+  --ff-accent: "Fraunces", serif;
 }
 
 /*RESET*/
@@ -41,94 +31,28 @@ p {
   margin: 0;
 }
 
-img {
+h1,
+h2,
+p {
+  overflow-wrap: break-word;
+}
+
+img,
+picture {
   display: block;
   max-width: 100%;
 }
 
+button {
+  font: inherit;
+}
+
 
 /*UTILITY*/
-.flow>*+* {
-  margin-top: var(--flow-space, 1rem);
-}
-
-.bg-cyan {
-  background-color: var(--clr-dark-cyan);
-  color: var(--clr-white);
-}
-
-.rounded {
-  --round: var(--round);
-  border-radius: var(--round, var(--rounded));
-}
-
-.px {
-  padding-inline: var(--flow-space-sm);
-}
-
-.center {
-  display: grid;
-  place-items: center;
-  gap: var(--flow-space)
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex>* {
-  flex-basis: 100%;
-}
-
-.card {
-  max-width: 40rem;
-
-  background-color: var(--bg, var(--clr-white));
-  color: var(--fg, var(--clr-black))
-}
-
-.btn {
-  --round: .5rem;
-  padding: .75rem 1rem;
-  width: 100%;
-  border: none;
-}
 
 /*GENERAL*/
 body {
-  padding: 1rem;
-  font-size: var(--fs-400);
-
   line-height: 1.5;
-  background-color: var(--clr-cream);
-  font-family: var(--ff-montserrat);
-}
-
-h1 {
-  line-height: 1;
-}
-
-
-h1,
-money:not(:has(s)) {
-  font-family: var(--ff-fraunces);
-  font-weight: var(--fw-700);
-  font-size: var(--fs-600);
-}
-
-money:not(:has(s)) {
-  color: var(--clr-dark-cyan);
-}
-
-money:has(s) {
-  color: inherit;
-  opacity: .5;
-}
-
-p {
-  opacity: .5;
-  font-weight: var(--fw-500);
 }
 
 /*COMPONENTS*/
@@ -139,8 +63,3 @@ p {
 }
 
 /*media queries*/
-@media (min-width: 1440px) {
-  .flex {
-    flex-direction: row;
-  }
-}
