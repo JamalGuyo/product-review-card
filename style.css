@@ -4,6 +4,7 @@
 /*VARIABLES*/
 :root {
   --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-primary-500: hsl(158, 36%, 20%);
   --clr-secondary-200: hsl(30, 38%, 92%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
@@ -22,6 +23,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
+  line-height: 1.7;
 }
 
 body,
@@ -47,12 +52,102 @@ button {
   font: inherit;
 }
 
-
-/*UTILITY*/
+h1,
+h2 {
+  line-height: 1;
+}
 
 /*GENERAL*/
 body {
-  line-height: 1.5;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-500);
+  font-size: 0.875rem;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-secondary-200);
+
+  display: grid;
+  place-items: center;
+  margin: 1rem;
+}
+
+/*UTILITY*/
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+
+  font-weight: var(--fw-700);
+  font-size: 0.9125rem;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.button[data-icon="shopping-cart"]::before {
+  content: "";
+  height: 16px;
+  width: 15px;
+  background-image: url("./images/icon-cart.svg");
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary-500);
+}
+
+/*product styles*/
+
+.product {
+  --content-gap: 1rem;
+  --content-padding: 1.5rem;
+  display: grid;
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media (min-width:600px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-gap);
+  padding: var(--content-padding);
+}
+
+.product__category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: .8125rem
+}
+
+.product__title {
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-900);
+  font-size: 2rem;
+}
+
+.product__price {
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-400);
 }
 
 /*COMPONENTS*/
